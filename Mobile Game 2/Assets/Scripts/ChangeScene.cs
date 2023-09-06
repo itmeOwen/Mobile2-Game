@@ -7,6 +7,13 @@ public class ChangeScene : MonoBehaviour
 {
     public void LoadScene(string sceneName)
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void Retry()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
