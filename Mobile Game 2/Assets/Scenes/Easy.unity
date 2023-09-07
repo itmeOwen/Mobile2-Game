@@ -1512,7 +1512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dodgeSpeed: 7
   rollSpeed: 5
-  EggTarget: 30
+  EggTarget: 15
   waitTime: 2
   Endless: 0
   GameWin: {fileID: 1646554297}
