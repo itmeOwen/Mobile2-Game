@@ -16,11 +16,15 @@ public class Egg : MonoBehaviour
         
     }
 
+    [SerializeField] private AudioSource eggtouch;
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.tag== "Player")
         {
+
+            eggtouch.Play();
+
             PlayerBehavior.numberOfEggs += 1;
             Debug.Log("Eggs :" + PlayerBehavior.numberOfEggs);
             Destroy(gameObject);

@@ -16,7 +16,8 @@ public class ObstacleBehaviour : MonoBehaviour
         //PBScript = PB.GetComponent<PlayerBehavior>();
     }
 
-
+    [SerializeField] private AudioSource chickenHit;
+    
 
     [Tooltip("How long to wait before restarting the game")]
     public float waitTime = 0f;
@@ -25,6 +26,9 @@ public class ObstacleBehaviour : MonoBehaviour
         // First check if we collided with the player
         if (collision.gameObject.GetComponent<PlayerBehavior>())
         {
+            //Chicken Hit sound effect
+            chickenHit.Play();
+
             // Destroy the player
             Destroy(collision.gameObject);
             // Call the function ResetGame after waitTime
@@ -41,19 +45,5 @@ public class ObstacleBehaviour : MonoBehaviour
     }
 
 
-    public GameObject explosion;
-    /// <summary>
-    /// If the object is tapped, we spawn an explosion and
-    /// destroy this object
-    /// </summary>
-    private void PlayerTouch()
-    {
-        if (explosion != null)
-        {
-            var particles = Instantiate(explosion, transform.position,
-            Quaternion.identity);
-            Destroy(particles, 1.0f);
-        }
-        Destroy(this.gameObject);
-    }
+    
 }
