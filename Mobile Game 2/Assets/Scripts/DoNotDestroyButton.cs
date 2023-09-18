@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoNotDestroy : MonoBehaviour
+public class DoNotDestroyButton : MonoBehaviour
 {
     private void Awake()
     {
-        GameObject[] musicObj = GameObject.FindGameObjectsWithTag("Main Menu BGM");
+        GameObject[] musicObj = GameObject.FindGameObjectsWithTag("ButtonSound");
 
         if (musicObj.Length > 1)
         {
@@ -15,9 +15,7 @@ public class DoNotDestroy : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
 
 
-        
+
 
     }
-
-    
 }

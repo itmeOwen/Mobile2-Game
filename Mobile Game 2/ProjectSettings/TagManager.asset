@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ObstacleSpawn
   - Main Menu BGM
+  - ButtonSound
   layers:
   - Default
   - TransparentFX
