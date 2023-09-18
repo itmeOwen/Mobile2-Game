@@ -1799,7 +1799,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dodgeSpeed: 7
-  rollSpeed: 5
+  rollSpeed: 9
+  maxSpeed: 20
   EggTarget: 1
   waitTime: 2
   Endless: 1

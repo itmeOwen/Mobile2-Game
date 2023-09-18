@@ -18,8 +18,9 @@ public class PlayerBehavior : MonoBehaviour
     public float dodgeSpeed = 3;
     // How fast the ball moves forwards automatically
     [Tooltip("How fast the ball moves forwards automatically")]
-    [Range(0, 10)]
+    [Range(0, 20)]
     public float rollSpeed = 3;
+    public float maxSpeed;
 
     public static int numberOfEggs;
     public int EggTarget;
@@ -49,6 +50,10 @@ public class PlayerBehavior : MonoBehaviour
     /// /// </summary>
     void Update()
     {
+        // Increase speed of player over time
+        if (rollSpeed < maxSpeed)
+            rollSpeed += 0.2f * Time.deltaTime;
+
         // Check if we are running on a mobile device
 #if UNITY_IOS || UNITY_ANDROID
         //Check if Input has registered more than zero touches
