@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Egg : MonoBehaviour
 {
@@ -17,17 +18,20 @@ public class Egg : MonoBehaviour
     }
 
     [SerializeField] private AudioSource eggtouch;
+    public AudioClip eggCollect;
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.tag== "Player")
         {
 
-            eggtouch.Play();
+            AudioSource.PlayClipAtPoint(eggCollect, transform.position);
 
             PlayerBehavior.numberOfEggs += 1;
             Debug.Log("Eggs :" + PlayerBehavior.numberOfEggs);
             Destroy(gameObject);
         }
     }
+
+    
 }

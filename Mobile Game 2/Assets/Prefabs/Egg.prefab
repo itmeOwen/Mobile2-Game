@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3415453746101001992}
   - component: {fileID: 3415453746101001993}
   - component: {fileID: 3415453746101002039}
-  - component: {fileID: -5584957410175071982}
+  - component: {fileID: -8474384045207322710}
   m_Layer: 0
   m_Name: Egg
   m_TagString: Untagged
@@ -61,8 +61,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36fbab35260aa474cb9a960b3a873df4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eggtouch: {fileID: -5584957410175071982}
---- !u!82 &-5584957410175071982
+  eggtouch: {fileID: -8474384045207322710}
+  eggCollect: {fileID: 8300000, guid: 71800cf66ada54046996fadb3baf12e8, type: 3}
+--- !u!82 &-8474384045207322710
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
